@@ -4,26 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Brain AR Viewer (WebXR)</title>
-    <script type="module" src="script.js"></script>
-    <style>
-        body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; text-align: center; }
-        canvas { display: block; }
-        #arButton {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px 20px;
-            background: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webxr-polyfill/webxr-polyfill@latest/dist/webxr-polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/jsm/webxr/ARButton.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>3D Brain AR Viewer (WebXR)</h1>
     <button id="arButton">Enter AR Mode</button>
-    <script type="module" src="script.js"></script>
+    <div id="arContainer"></div>
+    <script src="script.js"></script>
 </body>
 </html>
