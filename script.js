@@ -26,9 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
         scene.add(light);
 
-        // Load 3D Brain Model
+        // 🔧 Load 3D Brain Model with GitHub Pages Workaround
         const loader = new GLTFLoader();
-        loader.load("./model/brain.glb", (gltf) => {
+        loader.load("./model/brain.txt", (gltf) => {  // ⬅️ Renamed brain.glb to brain.txt
+            gltf.scene.name = "brain.glb"; // Rename back in JS
             brainModel = gltf.scene;
             brainModel.scale.set(0.5, 0.5, 0.5);
             scene.add(brainModel);
