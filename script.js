@@ -1,6 +1,7 @@
- import * as THREE from 'https://unpkg.com/three@0.150.1/build/three.module.js';
+import * as THREE from 'https://unpkg.com/three@0.150.1/build/three.module.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.150.1/examples/jsm/loaders/GLTFLoader.js';
 import { ARButton } from 'https://unpkg.com/three@0.150.1/examples/jsm/webxr/ARButton.js';
+
 
 document.addEventListener("DOMContentLoaded", () => {
     let scene, camera, renderer, controller;
